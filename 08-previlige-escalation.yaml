@@ -1,5 +1,6 @@
 - name: demo on previlige escalation
   hosts: all
+  become: yes
   tasks:
     - name: Running uptime command
       ansible.builtin.shell: id
