@@ -6,4 +6,4 @@
       register: OUT
     - name: Printing user details
       ansible.builtin.debug:
-        msg: Value of the uptime is {{OUT.stdout}} 
+        msg: Username is {{OUT.stdout}} 
