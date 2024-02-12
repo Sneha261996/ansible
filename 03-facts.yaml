@@ -1,0 +1,9 @@
+- name: Demo on facts
+  hosts: prod                        # Declaring variable at playLevel, all the tasks of this play inherits this value.
+  tasks:
+    - name: Printing the OS 
+      ansible.builtin.debug:
+        msg: OS distribution si {{ansible_distribution}}
+    - name: Printing the mac address 
+      ansible.builtin.debug:
+        msg: MAC add is {{ansible_default_ipv4.macaddress}}
