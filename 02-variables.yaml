@@ -3,7 +3,20 @@
   hosts: all 
   vars:  
     URL: play.google.com                         # Declaring variable at playLevel, all the tasks of this play inherits this value.
+  vars_files:
+    - "{{ENV}}.yaml"
   tasks:
     - name: Printing the variable 
       ansible.builtin.debug:
-        msg: Value of the URL is {{URL}}  
+        msg: Value of the URL is {{URL}} 
+    - name: Printing the variable 
+      ansible.builtin.debug:
+        msg: Value of the URL is {{URL}} 
+      vars:
+        URL: task.google.com  
+    - name: Printing the variable from cmd
+      ansible.builtin.debug:
+        msg: Value of the xyz is {{XYZ}} 
+    - name: Printing ENV specific values
+      ansible.builtin.debug:
+        msg: Instance is {{INSTANCE_TYPE}} and disk size is {{DISK_SIZE}}
