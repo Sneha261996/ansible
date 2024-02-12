@@ -4,6 +4,6 @@
     - name: Running uptime command
       ansible.builtin.shell: id
       register: OUT
-    - name: Printing the system uptime 
+    - name: Printing user details
       ansible.builtin.debug:
         msg: Value of the uptime is {{OUT.stdout}} 
