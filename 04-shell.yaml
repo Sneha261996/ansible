@@ -6,5 +6,5 @@
       register: OUT
     - name: Printing the system uptime 
       ansible.builtin.debug:
-        msg: Value of the uptime is {{OUT}} 
+        msg: Value of the uptime is {{OUT.uptime}} 
  
