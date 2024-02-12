@@ -1,5 +1,5 @@
 - name: Demo on facts
-  hosts: prod                        # Declaring variable at playLevel, all the tasks of this play inherits this value.
+  hosts: all                        # Declaring variable at playLevel, all the tasks of this play inherits this value.
   tasks:
     - name: Printing the OS 
       ansible.builtin.debug:
